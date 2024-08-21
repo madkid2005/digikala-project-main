@@ -12,7 +12,7 @@ import type { FlipEffectMethods } from './modules/effect-flip.d.ts';
 import type { CreativeEffectMethods } from './modules/effect-creative.d.ts';
 import type { CardsEffectMethods } from './modules/effect-cards.d.ts';
 import type { HashNavigationMethods } from './modules/hash-navigation.d.ts';
-import type { HistoryMethods } from './modules/history.d.ts';
+import type { HidastanMethods } from './modules/hidastan.d.ts';
 import type { KeyboardMethods } from './modules/keyboard.d.ts';
 import type { MousewheelMethods } from './modules/mousewheel.d.ts';
 import type { NavigationMethods } from './modules/navigation.d.ts';
@@ -445,7 +445,7 @@ interface Swiper extends SwiperClass<SwiperEvents> {
   creativeEffect: CreativeEffectMethods;
   cardsEffect: CardsEffectMethods;
   hashNavigation: HashNavigationMethods;
-  history: HistoryMethods;
+  hidastan: HidastanMethods;
   keyboard: KeyboardMethods;
   mousewheel: MousewheelMethods;
   navigation: NavigationMethods;

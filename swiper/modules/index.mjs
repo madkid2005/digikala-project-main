@@ -8,7 +8,7 @@ export {default as Parallax} from './parallax.mjs';
 export {default as Zoom} from './zoom.mjs';
 export {default as Controller} from './controller.mjs';
 export {default as A11y} from './a11y.mjs';
-export {default as History} from './history.mjs';
+export {default as Hidastan} from './hidastan.mjs';
 export {default as HashNavigation} from './hash-navigation.mjs';
 export {default as Autoplay} from './autoplay.mjs';
 export {default as Thumbs} from './thumbs.mjs';

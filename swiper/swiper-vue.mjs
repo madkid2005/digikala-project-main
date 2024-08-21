@@ -504,7 +504,7 @@ const Swiper = {
       type: [Boolean, Object],
       default: undefined
     },
-    history: {
+    hidastan: {
       type: [Boolean, Object],
       default: undefined
     },

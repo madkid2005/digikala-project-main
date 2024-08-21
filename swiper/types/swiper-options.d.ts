@@ -8,7 +8,7 @@ import type { FlipEffectOptions } from './modules/effect-flip.d.ts';
 import type { CreativeEffectOptions } from './modules/effect-creative.d.ts';
 import type { CardsEffectOptions } from './modules/effect-cards.d.ts';
 import type { HashNavigationOptions } from './modules/hash-navigation.d.ts';
-import type { HistoryOptions } from './modules/history.d.ts';
+import type { HidastanOptions } from './modules/hidastan.d.ts';
 import type { KeyboardOptions } from './modules/keyboard.d.ts';
 import type { MousewheelOptions } from './modules/mousewheel.d.ts';
 import type { NavigationOptions } from './modules/navigation.d.ts';
@@ -236,7 +236,7 @@ export interface SwiperOptions {
   userAgent?: string | null;
 
   /**
-   * Required for active slide detection when rendered on server-side and enabled history
+   * Required for active slide detection when rendered on server-side and enabled hidastan
    *
    * @default null
    */
@@ -1027,14 +1027,14 @@ export interface SwiperOptions {
   hashNavigation?: HashNavigationOptions | boolean;
 
   /**
-   * Enables history push state where every slide will have its own url. In this parameter you have to specify main slides url like `"slides"` and specify every slide url using `data-history` attribute.
+   * Enables hidastan push state where every slide will have its own url. In this parameter you have to specify main slides url like `"slides"` and specify every slide url using `data-hidastan` attribute.
    *
-   * Object with history navigation parameters or boolean `true` to enable with default settings
+   * Object with hidastan navigation parameters or boolean `true` to enable with default settings
    *
    * @example
    * ```js
    * const swiper = new Swiper('.swiper', {
-   *   history: {
+   *   hidastan: {
    *     replaceState: true,
    *   },
    * });
@@ -1042,11 +1042,11 @@ export interface SwiperOptions {
    *
    * @example
    * ```html
-   * <!-- will produce "slides/slide1" url in browser history -->
-   * <div class="swiper-slide" data-history="slide1"></div>
+   * <!-- will produce "slides/slide1" url in browser hidastan -->
+   * <div class="swiper-slide" data-hidastan="slide1"></div>
    * ```
    */
-  history?: HistoryOptions | boolean;
+  hidastan?: HidastanOptions | boolean;
 
   /**
    * Enables navigation through slides using keyboard. Object with keyboard parameters or boolean `true` to enable with default settings

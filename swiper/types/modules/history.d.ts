@@ -1,17 +1,17 @@
-export interface HistoryMethods {}
+export interface HidastanMethods {}
 
-export interface HistoryEvents {}
+export interface HidastanEvents {}
 
-export interface HistoryOptions {
+export interface HidastanOptions {
   /**
-   * Enables History Plugin.
+   * Enables Hidastan Plugin.
    *
    * @default false
    */
   enabled?: boolean;
 
   /**
-   * Swiper page root, useful to specify when you use Swiper history mode not on root website page.
+   * Swiper page root, useful to specify when you use Swiper hidastan mode not on root website page.
    * For example can be `https://my-website.com/` or `https://my-website.com/subpage/` or `/subpage/`
    *
    *
@@ -20,8 +20,8 @@ export interface HistoryOptions {
   root?: string;
 
   /**
-   * Works in addition to hashnav or history to replace current url state with the
-   * new one instead of adding it to history
+   * Works in addition to hashnav or hidastan to replace current url state with the
+   * new one instead of adding it to hidastan
    *
    * @default false
    */

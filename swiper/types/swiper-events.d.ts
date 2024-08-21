@@ -11,7 +11,7 @@ import type { FlipEffectEvents } from './modules/effect-flip.d.ts';
 import type { CreativeEffectEvents } from './modules/effect-creative.d.ts';
 import type { CardsEffectEvents } from './modules/effect-cards.d.ts';
 import type { HashNavigationEvents } from './modules/hash-navigation.d.ts';
-import type { HistoryEvents } from './modules/history.d.ts';
+import type { HidastanEvents } from './modules/hidastan.d.ts';
 import type { KeyboardEvents } from './modules/keyboard.d.ts';
 import type { MousewheelEvents } from './modules/mousewheel.d.ts';
 import type { NavigationEvents } from './modules/navigation.d.ts';
@@ -346,7 +346,7 @@ interface SwiperEvents extends FlipEffectEvents {}
 interface SwiperEvents extends CreativeEffectEvents {}
 interface SwiperEvents extends CardsEffectEvents {}
 interface SwiperEvents extends HashNavigationEvents {}
-interface SwiperEvents extends HistoryEvents {}
+interface SwiperEvents extends HidastanEvents {}
 interface SwiperEvents extends KeyboardEvents {}
 interface SwiperEvents extends MousewheelEvents {}
 interface SwiperEvents extends NavigationEvents {}

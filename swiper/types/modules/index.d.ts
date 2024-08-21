@@ -10,7 +10,7 @@ declare const EffectFlip: SwiperModule;
 declare const EffectCreative: SwiperModule;
 declare const EffectCards: SwiperModule;
 declare const HashNavigation: SwiperModule;
-declare const History: SwiperModule;
+declare const Hidastan: SwiperModule;
 declare const Keyboard: SwiperModule;
 declare const Lazy: SwiperModule;
 declare const Mousewheel: SwiperModule;
@@ -36,7 +36,7 @@ export {
   EffectCreative,
   EffectCards,
   HashNavigation,
-  History,
+  Hidastan,
   Keyboard,
   Lazy,
   Mousewheel,

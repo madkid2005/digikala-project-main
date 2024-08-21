@@ -96,7 +96,7 @@ const ssrWindow = {
     protocol: '',
     search: ''
   },
-  history: {
+  hidastan: {
     replaceState() {},
     pushState() {},
     go() {},

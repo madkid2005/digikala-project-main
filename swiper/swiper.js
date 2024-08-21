@@ -111,7 +111,7 @@ var Swiper = (function () {
       protocol: '',
       search: ''
     },
-    history: {
+    hidastan: {
       replaceState() {},
       pushState() {},
       go() {},

@@ -1,13 +1,13 @@
 
 
 
-.story {
+.dastan {
   width: 100%;
   height: 170px;
   padding-left: 120px;
   padding-right: 120px;
   cursor: pointer;
-  .swiper__slide__col{  
+  .slider-das{  
     width: 100%;
     height: 100%;
     display: flex;
@@ -109,20 +109,20 @@
   }
 }
 
-.more__digikala {
+.digikala {
   width: 100%;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  .more__digikala__row {
+  .digikala__row {
     padding: 8px 0px;
     width: 1336px;
     height: 104px;
     display: flex;
     justify-content: space-around;
-    .more__digikala__types {
+    .digikala__types {
       width: 82px;
       height: 104px;
       img {
@@ -142,7 +142,7 @@
         margin-top: 4px;
       }
     }
-    .more__digikala__more {
+    .digikala__more {
       width: 52px;
       height: 52px;
       border-radius: 50%;
@@ -211,7 +211,7 @@
       width: 88px;
       height: 88px;
     }
-    .discount__logo{
+    .dis__logo{
       width: 80px;
       height: 80px;
       margin-top: 20px;
@@ -238,22 +238,22 @@
   .swiper-slide{
     padding: 8px;
     display: inline-block;
-    .pink__slide__pic{
+    .slide-aks{
       width: 132px;
       height: 132px;
     }
-    .pink__slide__text{
+    .slide-text{
       font-size: 12px;
       color: #888787;
       margin-top: 8px;
     }
-    .price__line{
+    .poll{
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      .discount{
+      .dis{
         display: inline-block;
         background-color: #d63755;
         width: 34px;
@@ -264,7 +264,7 @@
         color: white;
         font-family: Homa;
       }
-      .price{
+      .money{
         color: #3f4064;
         font-size: 14px;
         display: flex;
@@ -278,7 +278,7 @@
       }
       
     }
-    .last__row{
+    .Akharin-kha{
       span{
         text-decoration: line-through;
         color: #d1cfcf;
@@ -329,7 +329,7 @@
       width: 88px;
       height: 88px;
     }
-    .discount__logo{
+    .dis__logo{
       width: 80px;
       height: 80px;
       margin-top: 20px;
@@ -356,22 +356,22 @@
   .swiper-slide{
     padding: 8px;
     display: inline-block;
-    .pink__slide__pic{
+    .slide-aks{
       width: 132px;
       height: 132px;
     }
-    .pink__slide__text{
+    .slide-text{
       font-size: 12px;
       color: #888787;
       margin-top: 8px;
     }
-    .price__line{
+    .poll{
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      .discount{
+      .dis{
         display: inline-block;
         background-color: #d63755;
         width: 34px;
@@ -382,7 +382,7 @@
         color: white;
         font-family: Homa;
       }
-      .price{
+      .money{
         color: #3f4064;
         font-size: 14px;
         display: flex;
@@ -396,7 +396,7 @@
       }
       
     }
-    .last__row{
+    .Akharin-kha{
       span{
         text-decoration: line-through;
         color: #d1cfcf;
@@ -409,11 +409,11 @@
     }
   }
 }
-.strip__discount{
+.strip__dis{
   width: 1336px;
   height: 110px;
   margin: 15px 128px;
-  .strip__discount__main{
+  .strip__dis__main{
     width: 1336px;
     height: 110px;
     background-color: #ecefef;
@@ -423,7 +423,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    .strip__discount__info{
+    .strip__dis__info{
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -431,7 +431,7 @@
       height: 82px;
       padding: 16px 40px 12px 40px;
       text-decoration: none;
-      .strip__discount__info__right{
+      .strip__dis__info__right{
         width: 468px;
         height: 62px;
         .right__right{
@@ -455,7 +455,7 @@
               margin-left: 25px;
             }
           }
-          .discount__right{
+          .dis__right{
             width: 110px;
             height: 26px;
             background-color: #029a49;
@@ -475,7 +475,7 @@
           }
         }
       }
-      .strip__discount__info__left{
+      .strip__dis__info__left{
         width: 635px;
         height: 74px;
         margin-right: 120px;
@@ -504,7 +504,7 @@
                 border-radius: 50%;
               }
             }
-            .image__discount{
+            .image__dis{
               position: absolute;
               bottom: 2px;
               width: 34px;
@@ -515,7 +515,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              .main__discount{
+              .main__dis{
                 width: 21px;
                 height: 26px;
                 font-size: 12px;
@@ -1276,13 +1276,13 @@ cursor: pointer;
           width: 201px;
           height: 64px;
           padding-top: 4px;
-          .price__line {
+          .poll {
             width: 100%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            .discount {
+            .dis {
               display: inline-block;
               background-color: #d63755;
               width: 34px;
@@ -1296,7 +1296,7 @@ cursor: pointer;
                 font-size: 14px;
               }
             }
-            .price {
+            .money {
               color: #3f4064;
               font-size: 16px;
               font-weight: 500;
@@ -1310,7 +1310,7 @@ cursor: pointer;
               }
             }
           }
-          .last__row {
+          .Akharin-kha {
             span {
               text-decoration: line-through;
               color: #d1cfcf;
@@ -1348,13 +1348,13 @@ cursor: pointer;
           width: 201px;
           height: 64px;
           padding-top: 4px;
-          .price__line {
+          .poll {
             width: 100%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            .discount {
+            .dis {
               display: inline-block;
               background-color: #d63755;
               width: 34px;
@@ -1368,7 +1368,7 @@ cursor: pointer;
                 font-size: 14px;
               }
             }
-            .price {
+            .money {
               color: #3f4064;
               font-size: 16px;
               font-weight: 500;
@@ -1382,7 +1382,7 @@ cursor: pointer;
               }
             }
           }
-          .last__row {
+          .Akharin-kha {
             span {
               text-decoration: line-through;
               color: #d1cfcf;
@@ -1422,13 +1422,13 @@ cursor: pointer;
           width: 201px;
           height: 64px;
           padding-top: 4px;
-          .price__line {
+          .poll {
             width: 100%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
-            .discount {
+            .dis {
               display: inline-block;
               background-color: #d63755;
               width: 34px;
@@ -1442,7 +1442,7 @@ cursor: pointer;
                 font-size: 14px;
               }
             }
-            .price {
+            .money {
               color: #3f4064;
               font-size: 16px;
               font-weight: 500;
@@ -1456,7 +1456,7 @@ cursor: pointer;
               }
             }
           }
-          .last__row {
+          .Akharin-kha {
             span {
               text-decoration: line-through;
               color: #d1cfcf;
@@ -2037,7 +2037,7 @@ border-top: 1px solid #dfdeded7;
       width: 76.5%;
       display: flex;
       align-items: center;
-      .searchbox {
+      .search {
         width: 600px;
         height: 44px;
         background-color: #f0f0f1;
@@ -2111,7 +2111,7 @@ border-top: 1px solid #dfdeded7;
       height: 40px;
       display: flex;
       padding-right: 18px;
-      .part1{
+      .sliderr1{
         width: 142px;
         height: 100%;
         display: flex;
@@ -2348,7 +2348,7 @@ border-top: 1px solid #dfdeded7;
           }
         }
       }
-      .part2 {
+      .sliderr2 {
         height: 40px;
         width: 600px;
         font-size: 12px;
@@ -2375,7 +2375,7 @@ border-top: 1px solid #dfdeded7;
           margin-left: 14px;
         }
       }
-      .part3 {
+      .sliderr3 {
         font-size: 12px;
         font-weight: 400;
         cursor: pointer;

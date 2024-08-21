@@ -9,7 +9,7 @@ import type {
   CreativeEffectOptions,
   CardsEffectOptions,
   HashNavigationOptions,
-  HistoryOptions,
+  HidastanOptions,
   KeyboardOptions,
   MousewheelOptions,
   NavigationOptions,
@@ -388,8 +388,8 @@ declare const Swiper: DefineComponent<
       type: PropType<HashNavigationOptions | boolean>;
       default: undefined;
     };
-    history: {
-      type: PropType<HistoryOptions | boolean>;
+    hidastan: {
+      type: PropType<HidastanOptions | boolean>;
       default: undefined;
     };
     keyboard: {

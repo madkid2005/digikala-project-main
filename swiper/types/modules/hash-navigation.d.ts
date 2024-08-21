@@ -16,7 +16,7 @@ export interface HashNavigationEvents {
 export interface HashNavigationOptions {
   /**
    * Set to `true` to enable also navigation through slides (when hashnav
-   * is enabled) by browser history or by setting directly hash on document location
+   * is enabled) by browser hidastan or by setting directly hash on document location
    *
    * @default false
    */
@@ -24,7 +24,7 @@ export interface HashNavigationOptions {
 
   /**
    * Works in addition to hashnav to replace current url state with the
-   * new one instead of adding it to history
+   * new one instead of adding it to hidastan
    *
    * @default     false
    */

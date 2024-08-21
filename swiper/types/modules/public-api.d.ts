@@ -8,7 +8,7 @@ export type * from './effect-flip.d.ts';
 export type * from './effect-creative.d.ts';
 export type * from './effect-cards.d.ts';
 export type * from './hash-navigation.d.ts';
-export type * from './history.d.ts';
+export type * from './hidastan.d.ts';
 export type * from './keyboard.d.ts';
 export type * from './mousewheel.d.ts';
 export type * from './navigation.d.ts';

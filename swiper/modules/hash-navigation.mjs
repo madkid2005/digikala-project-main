@@ -41,9 +41,9 @@ function HashNavigation(_ref) {
   const setHash = () => {
     if (!initialized || !swiper.params.hashNavigation.enabled) return;
     const activeSlideEl = swiper.virtual && swiper.params.virtual.enabled ? swiper.slidesEl.querySelector(`[data-swiper-slide-index="${swiper.activeIndex}"]`) : swiper.slides[swiper.activeIndex];
-    const activeSlideHash = activeSlideEl ? activeSlideEl.getAttribute('data-hash') || activeSlideEl.getAttribute('data-history') : '';
-    if (swiper.params.hashNavigation.replaceState && window.history && window.history.replaceState) {
-      window.history.replaceState(null, null, `#${activeSlideHash}` || '');
+    const activeSlideHash = activeSlideEl ? activeSlideEl.getAttribute('data-hash') || activeSlideEl.getAttribute('data-hidastan') : '';
+    if (swiper.params.hashNavigation.replaceState && window.hidastan && window.hidastan.replaceState) {
+      window.hidastan.replaceState(null, null, `#${activeSlideHash}` || '');
       emit('hashSet');
     } else {
       document.location.hash = activeSlideHash || '';
@@ -51,7 +51,7 @@ function HashNavigation(_ref) {
     }
   };
   const init = () => {
-    if (!swiper.params.hashNavigation.enabled || swiper.params.history && swiper.params.history.enabled) return;
+    if (!swiper.params.hashNavigation.enabled || swiper.params.hidastan && swiper.params.hidastan.enabled) return;
     initialized = true;
     const hash = document.location.hash.replace('#', '');
     if (hash) {

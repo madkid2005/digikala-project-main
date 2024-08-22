@@ -210,7 +210,7 @@ type SwiperProps = Omit<
   onTransitionEnd?: (swiper: SwiperClass) => void;
 
   /**
-   * Event will be fired when user touch Swiper. Receives `pointerdown` event as an arguments.
+   * Event will be fired when user touch Swiper. Receives `pointerPaiin` event as an arguments.
    */
   onTouchStart?: (swiper: SwiperClass, event: MouseEvent | TouchEvent | PointerEvent) => void;
 

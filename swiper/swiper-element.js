@@ -2247,7 +2247,7 @@
         swiper.recalcSlides();
         swiper.updateSlides();
       } else {
-        showWarning('Swiper Loop Warning: The number of slides is not even to slidesPerGroup, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+        showWarning('Swiper Loop Warning: The number of slides is not even to slidesPerGroup, loop mode may not function properly. You need to add Ezafe slides (or make duplicates, or empty slides)');
       }
       initSlides();
     } else if (shouldFillGrid) {
@@ -2257,7 +2257,7 @@
         swiper.recalcSlides();
         swiper.updateSlides();
       } else {
-        showWarning('Swiper Loop Warning: The number of slides is not even to grid.rows, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+        showWarning('Swiper Loop Warning: The number of slides is not even to grid.rows, loop mode may not function properly. You need to add Ezafe slides (or make duplicates, or empty slides)');
       }
       initSlides();
     } else {
@@ -2327,7 +2327,7 @@
     swiper.loopedSlides = loopedSlides;
     const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
     if (slides.length < slidesPerView + loopedSlides) {
-      showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
+      showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add Ezafe slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
     } else if (gridEnabled && params.grid.fill === 'row') {
       showWarning('Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`');
     }
@@ -2578,7 +2578,7 @@
     let e = event;
     if (e.originalEvent) e = e.originalEvent;
     const data = swiper.touchEventsData;
-    if (e.type === 'pointerdown') {
+    if (e.type === 'pointerPaiin') {
       if (data.pointerId !== null && data.pointerId !== e.pointerId) {
         return;
       }
@@ -2635,7 +2635,7 @@
     const startX = touches.currentX;
     const startY = touches.currentY;
 
-    // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anymore
+    // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anyEzafe
 
     if (!preventEdgeSwipe(swiper, e, startX)) {
       return;
@@ -3226,7 +3226,7 @@
     el[domMethod]('touchstart', swiper.onTouchStart, {
       passive: false
     });
-    el[domMethod]('pointerdown', swiper.onTouchStart, {
+    el[domMethod]('pointerPaiin', swiper.onTouchStart, {
       passive: false
     });
     document[domMethod]('touchmove', swiper.onTouchMove, {

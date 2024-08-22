@@ -231,7 +231,7 @@ function Scrollbar(_ref) {
     } : false;
     if (!target) return;
     const eventMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
-    target[eventMethod]('pointerdown', onDragStart, activeListener);
+    target[eventMethod]('pointerPaiin', onDragStart, activeListener);
     document[eventMethod]('pointermove', onDragMove, activeListener);
     document[eventMethod]('pointerup', onDragEnd, passiveListener);
   }

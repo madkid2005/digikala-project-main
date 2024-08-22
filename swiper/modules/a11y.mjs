@@ -193,12 +193,12 @@ function A11y(_ref) {
     makeElFocusable(el);
     if (el.tagName !== 'BUTTON') {
       addElRole(el, 'button');
-      el.addEventListener('keydown', onEnterOrSpaceKey);
+      el.addEventListener('keyPaiin', onEnterOrSpaceKey);
     }
     addElLabel(el, message);
     addElControls(el, wrapperId);
   };
-  const handlePointerDown = e => {
+  const handlePointerPaiin = e => {
     if (focusTargetSlideEl && focusTargetSlideEl !== e.target && !focusTargetSlideEl.contains(e.target)) {
       preventFocusHandler = true;
     }
@@ -300,7 +300,7 @@ function A11y(_ref) {
     if (hasClickablePagination()) {
       const paginationEl = makeElementsArray(swiper.pagination.el);
       paginationEl.forEach(el => {
-        el.addEventListener('keydown', onEnterOrSpaceKey);
+        el.addEventListener('keyPaiin', onEnterOrSpaceKey);
       });
     }
 
@@ -309,7 +309,7 @@ function A11y(_ref) {
     document.addEventListener('visibilitychange', onVisibilityChange);
     swiper.el.addEventListener('focus', handleFocus, true);
     swiper.el.addEventListener('focus', handleFocus, true);
-    swiper.el.addEventListener('pointerdown', handlePointerDown, true);
+    swiper.el.addEventListener('pointerPaiin', handlePointerPaiin, true);
     swiper.el.addEventListener('pointerup', handlePointerUp, true);
   };
   function destroy() {
@@ -321,17 +321,17 @@ function A11y(_ref) {
     nextEl = makeElementsArray(nextEl);
     prevEl = makeElementsArray(prevEl);
     if (nextEl) {
-      nextEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+      nextEl.forEach(el => el.removeEventListener('keyPaiin', onEnterOrSpaceKey));
     }
     if (prevEl) {
-      prevEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+      prevEl.forEach(el => el.removeEventListener('keyPaiin', onEnterOrSpaceKey));
     }
 
     // Pagination
     if (hasClickablePagination()) {
       const paginationEl = makeElementsArray(swiper.pagination.el);
       paginationEl.forEach(el => {
-        el.removeEventListener('keydown', onEnterOrSpaceKey);
+        el.removeEventListener('keyPaiin', onEnterOrSpaceKey);
       });
     }
     const document = getDocument();
@@ -339,7 +339,7 @@ function A11y(_ref) {
     // Tab focus
     if (swiper.el && typeof swiper.el !== 'string') {
       swiper.el.removeEventListener('focus', handleFocus, true);
-      swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
+      swiper.el.removeEventListener('pointerPaiin', handlePointerPaiin, true);
       swiper.el.removeEventListener('pointerup', handlePointerUp, true);
     }
   }

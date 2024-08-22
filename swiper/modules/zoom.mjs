@@ -550,7 +550,7 @@ function Zoom(_ref) {
     } = getListeners();
 
     // Scale image
-    swiper.wrapperEl.addEventListener('pointerdown', onGestureStart, passiveListener);
+    swiper.wrapperEl.addEventListener('pointerPaiin', onGestureStart, passiveListener);
     swiper.wrapperEl.addEventListener('pointermove', onGestureChange, activeListenerWithCapture);
     ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
       swiper.wrapperEl.addEventListener(eventName, onGestureEnd, passiveListener);
@@ -569,7 +569,7 @@ function Zoom(_ref) {
     } = getListeners();
 
     // Scale image
-    swiper.wrapperEl.removeEventListener('pointerdown', onGestureStart, passiveListener);
+    swiper.wrapperEl.removeEventListener('pointerPaiin', onGestureStart, passiveListener);
     swiper.wrapperEl.removeEventListener('pointermove', onGestureChange, activeListenerWithCapture);
     ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
       swiper.wrapperEl.removeEventListener(eventName, onGestureEnd, passiveListener);

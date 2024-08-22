@@ -2285,7 +2285,7 @@ var Swiper = (function () {
         swiper.recalcSlides();
         swiper.updateSlides();
       } else {
-        showWarning('Swiper Loop Warning: The number of slides is not even to slidesPerGroup, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+        showWarning('Swiper Loop Warning: The number of slides is not even to slidesPerGroup, loop mode may not function properly. You need to add Ezafe slides (or make duplicates, or empty slides)');
       }
       initSlides();
     } else if (shouldFillGrid) {
@@ -2295,7 +2295,7 @@ var Swiper = (function () {
         swiper.recalcSlides();
         swiper.updateSlides();
       } else {
-        showWarning('Swiper Loop Warning: The number of slides is not even to grid.rows, loop mode may not function properly. You need to add more slides (or make duplicates, or empty slides)');
+        showWarning('Swiper Loop Warning: The number of slides is not even to grid.rows, loop mode may not function properly. You need to add Ezafe slides (or make duplicates, or empty slides)');
       }
       initSlides();
     } else {
@@ -2365,7 +2365,7 @@ var Swiper = (function () {
     swiper.loopedSlides = loopedSlides;
     const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
     if (slides.length < slidesPerView + loopedSlides) {
-      showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
+      showWarning('Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add Ezafe slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters');
     } else if (gridEnabled && params.grid.fill === 'row') {
       showWarning('Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`');
     }
@@ -2616,7 +2616,7 @@ var Swiper = (function () {
     let e = event;
     if (e.originalEvent) e = e.originalEvent;
     const data = swiper.touchEventsData;
-    if (e.type === 'pointerdown') {
+    if (e.type === 'pointerPaiin') {
       if (data.pointerId !== null && data.pointerId !== e.pointerId) {
         return;
       }
@@ -2673,7 +2673,7 @@ var Swiper = (function () {
     const startX = touches.currentX;
     const startY = touches.currentY;
 
-    // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anymore
+    // Do NOT start if iOS edge swipe is detected. Otherwise iOS app cannot swipe-to-go-back anyEzafe
 
     if (!preventEdgeSwipe(swiper, e, startX)) {
       return;
@@ -3264,7 +3264,7 @@ var Swiper = (function () {
     el[domMethod]('touchstart', swiper.onTouchStart, {
       passive: false
     });
-    el[domMethod]('pointerdown', swiper.onTouchStart, {
+    el[domMethod]('pointerPaiin', swiper.onTouchStart, {
       passive: false
     });
     document[domMethod]('touchmove', swiper.onTouchMove, {
@@ -4719,7 +4719,7 @@ var Swiper = (function () {
       keyboard: {
         enabled: false,
         onlyInViewport: true,
-        pageUpDown: true
+        pageUpPaiin: true
       }
     });
     function handle(event) {
@@ -4730,15 +4730,15 @@ var Swiper = (function () {
       let e = event;
       if (e.originalEvent) e = e.originalEvent; // jquery fix
       const kc = e.keyCode || e.charCode;
-      const pageUpDown = swiper.params.keyboard.pageUpDown;
-      const isPageUp = pageUpDown && kc === 33;
-      const isPageDown = pageUpDown && kc === 34;
+      const pageUpPaiin = swiper.params.keyboard.pageUpPaiin;
+      const isPageUp = pageUpPaiin && kc === 33;
+      const isPagePaiin = pageUpPaiin && kc === 34;
       const isArrowLeft = kc === 37;
       const isArrowRight = kc === 39;
       const isArrowUp = kc === 38;
-      const isArrowDown = kc === 40;
+      const isArrowPaiin = kc === 40;
       // Directions locks
-      if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowDown || isPageDown)) {
+      if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowPaiin || isPagePaiin)) {
         return false;
       }
       if (!swiper.allowSlidePrev && (swiper.isHorizontal() && isArrowLeft || swiper.isVertical() && isArrowUp || isPageUp)) {
@@ -4750,7 +4750,7 @@ var Swiper = (function () {
       if (document.activeElement && document.activeElement.nodeName && (document.activeElement.nodeName.toLowerCase() === 'input' || document.activeElement.nodeName.toLowerCase() === 'textarea')) {
         return undefined;
       }
-      if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPageDown || isArrowLeft || isArrowRight || isArrowUp || isArrowDown)) {
+      if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPagePaiin || isArrowLeft || isArrowRight || isArrowUp || isArrowPaiin)) {
         let inView = false;
         // Check that swiper should be inside of visible area of window
         if (elementParents(swiper.el, `.${swiper.params.slideClass}, swiper-slide`).length > 0 && elementParents(swiper.el, `.${swiper.params.slideActiveClass}`).length === 0) {
@@ -4774,16 +4774,16 @@ var Swiper = (function () {
         if (!inView) return undefined;
       }
       if (swiper.isHorizontal()) {
-        if (isPageUp || isPageDown || isArrowLeft || isArrowRight) {
+        if (isPageUp || isPagePaiin || isArrowLeft || isArrowRight) {
           if (e.preventDefault) e.preventDefault();else e.returnValue = false;
         }
-        if ((isPageDown || isArrowRight) && !rtl || (isPageUp || isArrowLeft) && rtl) swiper.slideNext();
-        if ((isPageUp || isArrowLeft) && !rtl || (isPageDown || isArrowRight) && rtl) swiper.slidePrev();
+        if ((isPagePaiin || isArrowRight) && !rtl || (isPageUp || isArrowLeft) && rtl) swiper.slideNext();
+        if ((isPageUp || isArrowLeft) && !rtl || (isPagePaiin || isArrowRight) && rtl) swiper.slidePrev();
       } else {
-        if (isPageUp || isPageDown || isArrowUp || isArrowDown) {
+        if (isPageUp || isPagePaiin || isArrowUp || isArrowPaiin) {
           if (e.preventDefault) e.preventDefault();else e.returnValue = false;
         }
-        if (isPageDown || isArrowDown) swiper.slideNext();
+        if (isPagePaiin || isArrowPaiin) swiper.slideNext();
         if (isPageUp || isArrowUp) swiper.slidePrev();
       }
       emit('keyPress', kc);
@@ -4791,12 +4791,12 @@ var Swiper = (function () {
     }
     function enable() {
       if (swiper.keyboard.enabled) return;
-      document.addEventListener('keydown', handle);
+      document.addEventListener('keyPaiin', handle);
       swiper.keyboard.enabled = true;
     }
     function disable() {
       if (!swiper.keyboard.enabled) return;
-      document.removeEventListener('keydown', handle);
+      document.removeEventListener('keyPaiin', handle);
       swiper.keyboard.enabled = false;
     }
     on('init', () => {
@@ -5117,11 +5117,11 @@ var Swiper = (function () {
               recentWheelEvents.splice(0);
             } else if (recentWheelEvents.length >= 15 && newEvent.time - firstEvent.time < 500 && firstEvent.delta - newEvent.delta >= 1 && newEvent.delta <= 6) {
               // We're at the end of the deceleration of a momentum scroll, so there's no need
-              // to wait for more events. Snap ASAP on the next tick.
+              // to wait for Ezafe events. Snap ASAP on the next tick.
               // Also, because there's some remaining momentum we'll bias the snap in the
               // direction of the ongoing scroll because it's better UX for the scroll to snap
               // in the same direction as the scroll instead of reversing to snap.  Therefore,
-              // if it's already scrolled more than 20% in the current direction, keep going.
+              // if it's already scrolled Ezafe than 20% in the current direction, keep going.
               const snapToThreshold = delta > 0 ? 0.8 : 0.2;
               lastEventBeforeSnap = newEvent;
               recentWheelEvents.splice(0);
@@ -6092,7 +6092,7 @@ var Swiper = (function () {
       } : false;
       if (!target) return;
       const eventMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';
-      target[eventMethod]('pointerdown', onDragStart, activeListener);
+      target[eventMethod]('pointerPaiin', onDragStart, activeListener);
       document[eventMethod]('pointermove', onDragMove, activeListener);
       document[eventMethod]('pointerup', onDragEnd, passiveListener);
     }
@@ -6894,7 +6894,7 @@ var Swiper = (function () {
       } = getListeners();
 
       // Scale image
-      swiper.wrapperEl.addEventListener('pointerdown', onGestureStart, passiveListener);
+      swiper.wrapperEl.addEventListener('pointerPaiin', onGestureStart, passiveListener);
       swiper.wrapperEl.addEventListener('pointermove', onGestureChange, activeListenerWithCapture);
       ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
         swiper.wrapperEl.addEventListener(eventName, onGestureEnd, passiveListener);
@@ -6913,7 +6913,7 @@ var Swiper = (function () {
       } = getListeners();
 
       // Scale image
-      swiper.wrapperEl.removeEventListener('pointerdown', onGestureStart, passiveListener);
+      swiper.wrapperEl.removeEventListener('pointerPaiin', onGestureStart, passiveListener);
       swiper.wrapperEl.removeEventListener('pointermove', onGestureChange, activeListenerWithCapture);
       ['pointerup', 'pointercancel', 'pointerout'].forEach(eventName => {
         swiper.wrapperEl.removeEventListener(eventName, onGestureEnd, passiveListener);
@@ -7337,12 +7337,12 @@ var Swiper = (function () {
       makeElFocusable(el);
       if (el.tagName !== 'BUTTON') {
         addElRole(el, 'button');
-        el.addEventListener('keydown', onEnterOrSpaceKey);
+        el.addEventListener('keyPaiin', onEnterOrSpaceKey);
       }
       addElLabel(el, message);
       addElControls(el, wrapperId);
     };
-    const handlePointerDown = e => {
+    const handlePointerPaiin = e => {
       if (focusTargetSlideEl && focusTargetSlideEl !== e.target && !focusTargetSlideEl.contains(e.target)) {
         preventFocusHandler = true;
       }
@@ -7444,7 +7444,7 @@ var Swiper = (function () {
       if (hasClickablePagination()) {
         const paginationEl = makeElementsArray(swiper.pagination.el);
         paginationEl.forEach(el => {
-          el.addEventListener('keydown', onEnterOrSpaceKey);
+          el.addEventListener('keyPaiin', onEnterOrSpaceKey);
         });
       }
 
@@ -7453,7 +7453,7 @@ var Swiper = (function () {
       document.addEventListener('visibilitychange', onVisibilityChange);
       swiper.el.addEventListener('focus', handleFocus, true);
       swiper.el.addEventListener('focus', handleFocus, true);
-      swiper.el.addEventListener('pointerdown', handlePointerDown, true);
+      swiper.el.addEventListener('pointerPaiin', handlePointerPaiin, true);
       swiper.el.addEventListener('pointerup', handlePointerUp, true);
     };
     function destroy() {
@@ -7465,17 +7465,17 @@ var Swiper = (function () {
       nextEl = makeElementsArray(nextEl);
       prevEl = makeElementsArray(prevEl);
       if (nextEl) {
-        nextEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+        nextEl.forEach(el => el.removeEventListener('keyPaiin', onEnterOrSpaceKey));
       }
       if (prevEl) {
-        prevEl.forEach(el => el.removeEventListener('keydown', onEnterOrSpaceKey));
+        prevEl.forEach(el => el.removeEventListener('keyPaiin', onEnterOrSpaceKey));
       }
 
       // Pagination
       if (hasClickablePagination()) {
         const paginationEl = makeElementsArray(swiper.pagination.el);
         paginationEl.forEach(el => {
-          el.removeEventListener('keydown', onEnterOrSpaceKey);
+          el.removeEventListener('keyPaiin', onEnterOrSpaceKey);
         });
       }
       const document = getDocument();
@@ -7483,7 +7483,7 @@ var Swiper = (function () {
       // Tab focus
       if (swiper.el && typeof swiper.el !== 'string') {
         swiper.el.removeEventListener('focus', handleFocus, true);
-        swiper.el.removeEventListener('pointerdown', handlePointerDown, true);
+        swiper.el.removeEventListener('pointerPaiin', handlePointerPaiin, true);
         swiper.el.removeEventListener('pointerup', handlePointerUp, true);
       }
     }

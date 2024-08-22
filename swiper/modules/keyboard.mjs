@@ -18,7 +18,7 @@ function Keyboard(_ref) {
     keyboard: {
       enabled: false,
       onlyInViewport: true,
-      pageUpDown: true
+      pageUpPaiin: true
     }
   });
   function handle(event) {
@@ -29,15 +29,15 @@ function Keyboard(_ref) {
     let e = event;
     if (e.originalEvent) e = e.originalEvent; // jquery fix
     const kc = e.keyCode || e.charCode;
-    const pageUpDown = swiper.params.keyboard.pageUpDown;
-    const isPageUp = pageUpDown && kc === 33;
-    const isPageDown = pageUpDown && kc === 34;
+    const pageUpPaiin = swiper.params.keyboard.pageUpPaiin;
+    const isPageUp = pageUpPaiin && kc === 33;
+    const isPagePaiin = pageUpPaiin && kc === 34;
     const isArrowLeft = kc === 37;
     const isArrowRight = kc === 39;
     const isArrowUp = kc === 38;
-    const isArrowDown = kc === 40;
+    const isArrowPaiin = kc === 40;
     // Directions locks
-    if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowDown || isPageDown)) {
+    if (!swiper.allowSlideNext && (swiper.isHorizontal() && isArrowRight || swiper.isVertical() && isArrowPaiin || isPagePaiin)) {
       return false;
     }
     if (!swiper.allowSlidePrev && (swiper.isHorizontal() && isArrowLeft || swiper.isVertical() && isArrowUp || isPageUp)) {
@@ -49,7 +49,7 @@ function Keyboard(_ref) {
     if (document.activeElement && document.activeElement.nodeName && (document.activeElement.nodeName.toLowerCase() === 'input' || document.activeElement.nodeName.toLowerCase() === 'textarea')) {
       return undefined;
     }
-    if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPageDown || isArrowLeft || isArrowRight || isArrowUp || isArrowDown)) {
+    if (swiper.params.keyboard.onlyInViewport && (isPageUp || isPagePaiin || isArrowLeft || isArrowRight || isArrowUp || isArrowPaiin)) {
       let inView = false;
       // Check that swiper should be inside of visible area of window
       if (elementParents(swiper.el, `.${swiper.params.slideClass}, swiper-slide`).length > 0 && elementParents(swiper.el, `.${swiper.params.slideActiveClass}`).length === 0) {
@@ -73,16 +73,16 @@ function Keyboard(_ref) {
       if (!inView) return undefined;
     }
     if (swiper.isHorizontal()) {
-      if (isPageUp || isPageDown || isArrowLeft || isArrowRight) {
+      if (isPageUp || isPagePaiin || isArrowLeft || isArrowRight) {
         if (e.preventDefault) e.preventDefault();else e.returnValue = false;
       }
-      if ((isPageDown || isArrowRight) && !rtl || (isPageUp || isArrowLeft) && rtl) swiper.slideNext();
-      if ((isPageUp || isArrowLeft) && !rtl || (isPageDown || isArrowRight) && rtl) swiper.slidePrev();
+      if ((isPagePaiin || isArrowRight) && !rtl || (isPageUp || isArrowLeft) && rtl) swiper.slideNext();
+      if ((isPageUp || isArrowLeft) && !rtl || (isPagePaiin || isArrowRight) && rtl) swiper.slidePrev();
     } else {
-      if (isPageUp || isPageDown || isArrowUp || isArrowDown) {
+      if (isPageUp || isPagePaiin || isArrowUp || isArrowPaiin) {
         if (e.preventDefault) e.preventDefault();else e.returnValue = false;
       }
-      if (isPageDown || isArrowDown) swiper.slideNext();
+      if (isPagePaiin || isArrowPaiin) swiper.slideNext();
       if (isPageUp || isArrowUp) swiper.slidePrev();
     }
     emit('keyPress', kc);
@@ -90,12 +90,12 @@ function Keyboard(_ref) {
   }
   function enable() {
     if (swiper.keyboard.enabled) return;
-    document.addEventListener('keydown', handle);
+    document.addEventListener('keyPaiin', handle);
     swiper.keyboard.enabled = true;
   }
   function disable() {
     if (!swiper.keyboard.enabled) return;
-    document.removeEventListener('keydown', handle);
+    document.removeEventListener('keyPaiin', handle);
     swiper.keyboard.enabled = false;
   }
   on('init', () => {

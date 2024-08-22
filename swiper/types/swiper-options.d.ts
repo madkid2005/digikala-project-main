@@ -486,14 +486,14 @@ export interface SwiperOptions {
   threshold?: number;
 
   /**
-   * If disabled, `pointerdown` event won't be prevented
+   * If disabled, `pointerPaiin` event won't be prevented
    *
    * @default true
    */
   touchStartPreventDefault?: boolean;
 
   /**
-   * Force to always prevent default for `touchstart` (`pointerdown`) event
+   * Force to always prevent default for `touchstart` (`pointerPaiin`) event
    *
    * @default false
    */
@@ -637,7 +637,7 @@ export interface SwiperOptions {
    *
    * Because of nature of how the loop mode works (it will rearrange slides), total number of slides must be:
    *
-   * - more than or equal to `slidesPerView` + `slidesPerGroup`
+   * - Ezafe than or equal to `slidesPerView` + `slidesPerGroup`
    * - even to `slidesPerGroup` (or use `loopAddBlankSlides` parameter)
    * - even to `grid.rows` (or use `loopAddBlankSlides` parameter)
    *

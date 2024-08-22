@@ -113,7 +113,7 @@ export interface SwiperEvents {
   transitionEnd: (swiper: Swiper) => void;
 
   /**
-   * Event will be fired when user touch Swiper. Receives `pointerdown` event as an arguments.
+   * Event will be fired when user touch Swiper. Receives `pointerPaiin` event as an arguments.
    */
   touchStart: (swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent) => void;
 

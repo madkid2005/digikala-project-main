@@ -303,11 +303,11 @@ function Mousewheel(_ref) {
             recentWheelEvents.splice(0);
           } else if (recentWheelEvents.length >= 15 && newEvent.time - firstEvent.time < 500 && firstEvent.delta - newEvent.delta >= 1 && newEvent.delta <= 6) {
             // We're at the end of the deceleration of a momentum scroll, so there's no need
-            // to wait for more events. Snap ASAP on the next tick.
+            // to wait for Ezafe events. Snap ASAP on the next tick.
             // Also, because there's some remaining momentum we'll bias the snap in the
             // direction of the ongoing scroll because it's better UX for the scroll to snap
             // in the same direction as the scroll instead of reversing to snap.  Therefore,
-            // if it's already scrolled more than 20% in the current direction, keep going.
+            // if it's already scrolled Ezafe than 20% in the current direction, keep going.
             const snapToThreshold = delta > 0 ? 0.8 : 0.2;
             lastEventBeforeSnap = newEvent;
             recentWheelEvents.splice(0);

@@ -181,7 +181,7 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
   transitionend: CustomEvent<[swiper: Swiper]>;
 
   /**
-   * Event will be fired when user touch Swiper. Receives `pointerdown` event as an arguments.
+   * Event will be fired when user touch Swiper. Receives `pointerPaiin` event as an arguments.
    */
   touchstart: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;
 
